@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "Lego BLE Docs",
+			"path": "../lego-ble-wireless-protocol-docs/"
+		}
+	],
+	"settings": {}
+}
