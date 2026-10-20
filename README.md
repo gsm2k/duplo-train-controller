@@ -10,7 +10,7 @@ Currently supports both generations of BLE train base:
 | Older base — 2018 | Newer base — 2025 |
 | --- | --- |
 | <img src="docs/images/duplo-trainbase-2018.png" alt="Older black DUPLO train base introduced in 2018" width="280"> | <img src="docs/images/duplo-trainbase-2025.png" alt="Newer blue DUPLO train base introduced in 2025" width="280"> |
-| Steam Train, Cargo Train, Coding Express. | Community Train and Adventure Train |
+| Steam Train, Cargo Train, Coding Express | Community Train, Adventure Train |
 
 Requires **Python 3.10+**, **Bleak** for Bluetooth LE, and **Tkinter** for the test
 GUI. Tkinter is provided by Python or your OS; it is not installed by pip.
@@ -42,9 +42,7 @@ Throttle is motor power, not a target speed. Missing telemetry shows `—`.
 
 _GUI screenshot to be added._
 
-<!-- Replace the placeholder above after adding docs/images/controller-gui.png:
-![DUPLO train controller GUI](docs/images/controller-gui.png)
--->
+<img src="docs/images/controller-gui.png" alt="GUI in --dry-run mode">
 
 ### Keyboard controls
 
