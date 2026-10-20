@@ -40,8 +40,6 @@ Throttle is motor power, not a target speed. Missing telemetry shows `—`.
 
 ### GUI screenshot
 
-_GUI screenshot to be added._
-
 <img src="docs/images/controller-gui.png" alt="GUI in --dry-run mode">
 
 ### Keyboard controls
