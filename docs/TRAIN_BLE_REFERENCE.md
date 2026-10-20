@@ -415,7 +415,7 @@ performed with the train upside down so its drive wheels could turn freely.
 
 ## Sources and remaining work
 
-- [LEGO Wireless Protocol documentation](https://github.com/LEGO/lego-ble-wireless-protocol-docs): common framing, message types, discovery, sensor configuration, and feedback. This is an older general protocol reference; its device list does not fully describe this base.
+- [LEGO Wireless Protocol 3.0.00 (Doc v3.0.00 r17)](https://lego.github.io/lego-ble-wireless-protocol-docs/): common framing, message types, discovery, sensor configuration, and feedback. This is an older general protocol reference; its device list does not fully describe this base.
 - [Matching newer-train command implementation](https://github.com/micschr0/duplo-train-10427-ble2mqtt/blob/main/src/protocol/commands.rs): motor and EVENTS packet layouts.
 - [Newer-train color mapping](https://github.com/micschr0/duplo-train-10427-ble2mqtt/blob/main/src/types.rs): named color IDs, including entries not individually tested here.
 
@@ -517,5 +517,5 @@ the LEGO manufacturer advertisement (`20` or `21`). The older profile uses
 motor port `00`, speed port `13`, and an int16 speed decoder; the newer uses
 ports `32`/`36` and int8 speed values. `--address` selects a specific base,
 and `--profile old`/`new` optionally filters discovery. The older profile
-does not request pairing. See the README for launch examples. The older
+does not request pairing. See the [README](../README.md) for launch examples. The older
 base was unsubscribed and disconnected after the discovery inspection.
