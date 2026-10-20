@@ -40,9 +40,13 @@ Throttle is motor power, not a target speed. Missing telemetry shows `—`.
 
 ### GUI screenshot
 
+<<<<<<< HEAD
 _GUI screenshot to be added._
 
 <img src="docs/images/controller-gui.png" alt="GUI in --dry-run mode">
+=======
+![DUPLO train controller GUI](docs/images/controller-gui.png)
+>>>>>>> 182d405ca3ed4af5c90741d79c812f5a2068f7c5
 
 ### Keyboard controls
 
