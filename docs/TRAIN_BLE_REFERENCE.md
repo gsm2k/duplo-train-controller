@@ -415,7 +415,7 @@ performed with the train upside down so its drive wheels could turn freely.
 
 ## Sources and remaining work
 
-- [Local LEGO Wireless Protocol documentation](../lego-ble-wireless-protocol-docs/docs/index.html): common framing, message types, discovery, sensor configuration, and feedback. This is an older general protocol reference; its device list does not fully describe this base.
+- [LEGO Wireless Protocol documentation](https://github.com/LEGO/lego-ble-wireless-protocol-docs): common framing, message types, discovery, sensor configuration, and feedback. This is an older general protocol reference; its device list does not fully describe this base.
 - [Matching newer-train command implementation](https://github.com/micschr0/duplo-train-10427-ble2mqtt/blob/main/src/protocol/commands.rs): motor and EVENTS packet layouts.
 - [Newer-train color mapping](https://github.com/micschr0/duplo-train-10427-ble2mqtt/blob/main/src/types.rs): named color IDs, including entries not individually tested here.
 

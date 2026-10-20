@@ -2,7 +2,19 @@
 
 A small Python/Tkinter controller for the older Steam Train and newer DUPLO
 train bases inspected in this project. Bluetooth uses [Bleak](https://bleak.readthedocs.io/en/latest/).
-Packet details and hardware findings are in [TRAIN_BLE_REFERENCE.md](TRAIN_BLE_REFERENCE.md).
+Packet details and hardware findings are in [TRAIN_BLE_REFERENCE.md](docs/TRAIN_BLE_REFERENCE.md).
+
+## Repository layout
+
+- `src/`: Python source; currently the unchanged `train_controller.py` module.
+- `tests/`: automated tests, kept separate from the source.
+- `docs/`: protocol reference and hardware investigation notes.
+- `.venv/`: local virtual environment, excluded from Git.
+- Root: README, license, requirements, and editor workspace configuration.
+
+Run the commands below from the repository root. This source layout leaves room
+for an installable library later; packaging metadata and package restructuring
+are deferred.
 
 ## Setup and run
 
@@ -13,7 +25,7 @@ Tkinter is missing, install `python3-tkinter` with your package manager.
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-python train_controller.py
+python src/train_controller.py
 ```
 
 Switch on the train and close any LEGO app connected to it. Run this from
@@ -28,9 +40,9 @@ If multiple trains are found, select one explicitly:
 
 ```bash
 # Older Steam Train:
-python train_controller.py --address E0:7D:EA:07:7A:7F
+python src/train_controller.py --address E0:7D:EA:07:7A:7F
 # Newer base:
-python train_controller.py --address 84:72:93:83:56:FA
+python src/train_controller.py --address 84:72:93:83:56:FA
 ```
 
 Alternatively, `--profile old` or `--profile new` restricts discovery to that
@@ -92,9 +104,9 @@ disconnection. Telemetry and motor writes share the same serialized worker.
 ## Test keys without the train
 
 ```bash
-python train_controller.py --dry-run
+python src/train_controller.py --dry-run
 # Exercise the older base's packet encoding:
-python train_controller.py --dry-run --profile old
+python src/train_controller.py --dry-run --profile old
 ```
 
 This needs Tkinter but no Bleak or Bluetooth connection. The window shows
@@ -107,5 +119,14 @@ should produce only one action until it is released and pressed again.
 Run the automated input and Bluetooth-cleanup tests with:
 
 ```bash
+PYTHONPATH=src python -m unittest discover -s tests -v
+```
+
+In PowerShell, run the tests with:
+
+```powershell
+$env:PYTHONPATH = "src"
 python -m unittest discover -s tests -v
 ```
+
+The source path is needed because the project is not yet installed as a package.
